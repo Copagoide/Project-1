@@ -321,6 +321,98 @@ input {
   color: #f4f3ee;
 }
 
+@media all and (max-width: 960px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 645px;
+  }
+}
+@media all and (max-width: 891px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 676px;
+  }
+}
+@media all and (max-width: 878px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 706px;
+  }
+}
+@media all and (max-width: 626px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 726px;
+  }
+}
+@media all and (max-width: 544px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 745px;
+  }
+}
+@media all and (max-width: 491px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 775px;
+  }
+}
+@media all and (max-width: 476px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 795px;
+  }
+}
+@media all and (max-width: 460px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 886px;
+  }
+}
+@media all and (max-width: 387px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 916px;
+  }
+}
+@media all and (max-width: 379px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 935px;
+  }
+}
+@media all and (max-width: 318px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 966px;
+  }
+}
+@media all and (max-width: 284px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 985px;
+  }
+}
+@media all and (max-width: 256px) {
+  #body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1016px;
+  }
+}
+
 @media all and (max-width: 892px) {
   .box-intro-image p {
     width: calc(100vw - 47px);
@@ -559,7 +651,6 @@ input {
     background: url("./images/pexels-pixabay-414171.jpg");
     height: 250px;
     position: absolute;
-    width: calc(100vw - 47px);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
   }
