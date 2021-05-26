@@ -77,10 +77,8 @@ h1 {
   height: 0;
   overflow: hidden;
   transition: 250ms ease-in-out;
-  display: block;
   background: #383838;
   flex-direction: column;
-  margin-top: 1rem;
   position: absolute;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -88,9 +86,6 @@ h1 {
 }
 #pages li {
   display: block;
-}
-#navbar li {
-  height: 20px;
 }
 #navbar .pagesOpen {
   height: 164px;
@@ -127,7 +122,9 @@ h1 {
     left: 0;
   }
   #navbar .pagesOpen {
+    z-index: 1;
     height: 137px;
+    margin-top: 1rem;
   }
 }
 
