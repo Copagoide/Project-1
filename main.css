@@ -461,7 +461,7 @@ h1 {
     width: 300px;
   }
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 430px) {
   .feedback-wrapper {
     margin-top: 20px;
     margin-bottom: 20px;
