@@ -461,6 +461,33 @@ h1 {
     width: 300px;
   }
 }
+@media all and (max-width: 389px) {
+  .feedback-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .feedback-main {
+    width: 250px;
+    padding: 10px;
+  }
+  .feedback-main h3 {
+    margin-top: 0;
+  }
+  .feedbackpage-specific input {
+    width: 111px;
+  }
+  .feedback-main textarea {
+    width: 232px;
+  }
+  #fullName {
+    margin-right: 5px;
+  }
+  #email {
+    margin-left: 5px;
+  }
+}
 /* END OF FEEDBACK PAGE CSS */
 
 /* CONTACT PAGE: */
