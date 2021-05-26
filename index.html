@@ -2,26 +2,33 @@
 <!-- @author Gustavo Copaga -->
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
-        <title>Project 1</title>
-    </head>
 
-    <body id="body">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style2.css">
+    <title>Project 1</title>
+</head>
+
+<body id="body">
     <!-- Header -->
-        <header id="header">
+    <header id="header">
+        <div id="header-container">
             <h1>Project 1</h1>
+            <div class="nav-toggle" id="navToggle">
+                <div class="navIcon" id="bars"><i class="fas fa-bars"></i></div>
+                <div class="navIcon hidden"><i class="fas fa-times"></i></div>
+            </div>
             <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li>
-                        <a href="#">Pages</a>
-                        <ul>
+                        <a href="#" id="pagesButton">Pages<i class="fas fa-chevron-down"></i></a>
+                        <ul id="pages">
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="contact.html">Contact Me</a></li>
                             <li><a href="feedback.html">Feedback</a></li>
@@ -30,102 +37,110 @@
                     <li><a href="signup.html">Sign Up</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
     <!-- Banner -->
-        <section id="banner">
-            <h2>Gustavo Copaga</h2>
-            <p>You are seeing my first project as a web developer.</p>
-            <ul id="banner-buttons">
-                <li><a href="about.html" id="banner-aboutme">About Me</a></li>
-                <li><a href="signup.html" id="banner-signup">Sign Up</a></li>
-            </ul>
-        </section>
+    <section id="banner">
+        <h2>Gustavo Copaga</h2>
+        <p>You are seeing my first project as a web developer.</p>
+        <ul id="banner-buttons">
+            <li><a href="about.html" id="banner-aboutme">About Me</a></li>
+            <li><a href="signup.html" id="banner-signup">Sign Up</a></li>
+        </ul>
+    </section>
 
     <!-- Main -->
-        <section id="main">
-            <section id="box-intro">
-                <header>
-                    <h2>Here you will see all I learned about software engineering and even more</h2>
-                    <p>I've spent more than fifteen hours learning all these features.</p>
-                </header>
-                <span class="box-intro-image"><p></p></span>
-            </section>
+    <section id="main">
+        <section id="box-intro">
+            <header>
+                <h2>Here you will see all I learned about software engineering and even more</h2>
+                <p>I've spent more than fifteen hours learning all these features.</p>
+            </header>
+            <span class="box-intro-image"></span>
+        </section>
 
-            <section id="feature-box">
-                <div class="feature-rows">
-                    <section class="features" id="feature1">
-                        <span class="font-awesome icon 1"></span>
-                        <h3>feature 1</h3>
-                        <p>This is the description for the first feature. There are also three other features!</p>
-                    </section>
-                    <section class="features" id="feature2">
-                        <span class="font-awesome icon 2"></span>
-                        <h3>feature 2</h3>
-                        <p>This is the description for the second feature. There are also three other features!</p>
-                    </section>
-                </div>
-                <div class="feature-rows">
-                    <section class="features" id="feature3">
-                        <span class="font-awesome icon 3"></span>
-                        <h3>feature 3</h3>
-                        <p>This is the description for the third feature. There are also three other features!</p>
-                    </section>
-                    <section class="features" id="feature4">
-                        <span class="font-awesome icon 4"></span>
-                        <h3>feature 4</h3>
-                        <p>This is the description for the fourth feature. There are also three other features!</p>
-                    </section>
-                </div>
-            </section>
-
-            <div id="additional-info-box">
-                <div class="additional-info1">
-                    <section class="box-special">
-                        <span class="image-featured1"></span>
-                        <h3>Contact Me</h3>
-                        <p>Contacting someone is important in case you wanted to hire his or her abilities, and that is why here I provide a way to contact me.</p>
-                        <ul class="actions special">
-                            <li><a href="contact.html" class="button alt">Learn More</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="additional-info2">
-                    <section class="box-special">
-                        <span class="image-featured2"></span>
-                        <h3>Feedback</h3>
-                        <p>Feedback is always important in case you have an inquiry or something you think that we can improve.</p>
-                        <ul class="actions special">
-                            <li><a href="#" class="button alt">Learn More</a></li>
-                        </ul>
-                    </section>
-                </div>
+        <section id="feature-box">
+            <div class="feature-rows">
+                <section class="features" id="feature1">
+                    <span class="font-awesome icon 1"></span>
+                    <h3>feature 1</h3>
+                    <p>This is the description for the first feature. There are also three other features!</p>
+                </section>
+                <section class="features" id="feature2">
+                    <span class="font-awesome icon 2"></span>
+                    <h3>feature 2</h3>
+                    <p>This is the description for the second feature. There are also three other features!</p>
+                </section>
+            </div>
+            <div class="feature-rows">
+                <section class="features" id="feature3">
+                    <span class="font-awesome icon 3"></span>
+                    <h3>feature 3</h3>
+                    <p>This is the description for the third feature. There are also three other features!</p>
+                </section>
+                <section class="features" id="feature4">
+                    <span class="font-awesome icon 4"></span>
+                    <h3>feature 4</h3>
+                    <p>This is the description for the fourth feature. There are also three other features!</p>
+                </section>
             </div>
         </section>
 
+        <div id="additional-info-box">
+            <div class="additional-info1">
+                <section class="box-special" id="box-special1">
+                    <span class="image-featured1"></span>
+                    <h3>Contact Me</h3>
+                    <p>Contacting someone is important in case you wanted to hire his or her abilities, and that is why
+                        here I provide a way to contact me.</p>
+                    <ul class="actions special">
+                        <li><a href="contact.html" class="button alt">Learn More</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="additional-info2">
+                <section class="box-special" id="box-special2">
+                    <span class="image-featured2"></span>
+                    <h3>Feedback</h3>
+                    <p>Feedback is always important in case you have an inquiry or something you think that we can
+                        improve.</p>
+                    <ul class="actions special">
+                        <li><a href="feedback.html" class="button alt">Learn More</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
-        <section id="cta">
-            <h2>Sign up for more of this!</h2>
-            <p>If you liked what you've seen, I'd appreciate if you could sign up in order to keep you posted about new stuff to be released soon.</p>
-            <form>
-                <div class="row gtr-50 gtr-uniform">
-                    <div class="email-box">
-                        <input type="email" name="email" id="email" placeholder="Email Address" />
-                    </div>
-                    <div class="col-4 col-12-mobilep">
-                        <input type="submit" value="Sign Up" class="fit" />
-                    </div>
+    <section id="cta">
+        <h2>Sign up for more of this!</h2>
+        <p>If you liked what you've seen, I'd appreciate if you could sign up in order to keep you posted about new
+            stuff to be released soon.</p>
+        <form>
+            <div class="row gtr-50 gtr-uniform">
+                <div class="email-box">
+                    <input type="email" name="email" id="email" placeholder="Email Address" />
                 </div>
-            </form>
-        </section>
+                <div class="CTAsubmit">
+                    <input type="submit" value="Sign Up" id="messageSent"/>
+                </div>
+            </div>
+        </form>
+    </section>
 
     <!-- Footer -->
     <footer id="footer">
         <ul id="icons">
-            <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Twitter" class="icon brands fa-twitter"><i
+                        class="fab fa-twitter-square"></i></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Facebook" class="icon brands fa-facebook-f"><i
+                        class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Instagram" class="icon brands fa-instagram"><i
+                        class="fab fa-instagram-square"></i></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/GitHub" class="icon brands fa-github"><i
+                        class="fab fa-github-square"></i></a></li>
         </ul>
         <ul id="copyright">
             <li>&copy; Copaga. All rights reserved.</li>
@@ -133,8 +148,8 @@
         </ul>
     </footer>
 
-    <!-- Scripts -->
-    <!-- ??? -->
+    <script src="./scripts/navToggle.js"></script>
 
-    </body>
+</body>
+
 </html>

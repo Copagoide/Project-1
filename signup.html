@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./main.css">
+        <title>Project 1</title>
+    </head>
+    <body class="signup-body">
+        <div class="color-overlay">
+            <!-- Header -->
+            <header id="header">
+                <div id="header-container">
+                    <h1>Project 1</h1>
+                    <div class="nav-toggle" id="navToggle">
+                        <div class="navIcon" id="bars"><i class="fas fa-bars"></i></div>
+                        <div class="navIcon hidden"><i class="fas fa-times"></i></div>
+                    </div>
+                    <nav id="navbar">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a href="#" id="pagesButton">Pages<i class="fas fa-chevron-down"></i></a>
+                                <ul id="pages">
+                                    <li><a href="about.html">About Me</a></li>
+                                    <li><a href="contact.html">Contact Me</a></li>
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <div class="main-wrapper">
+                <section id="main" class="signup-main">
+                    <h3>SIGN UP</h3>
+                    <div class="input-boxes">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" /><br>
+                        <input type="text" name="lastName" id="lastName" placeholder="LastName" /><br>
+                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" /><br>
+                        <input type="email" name="email" id="email" placeholder="Email Address" /><br>
+                        <input type="password" name="password" id="Password" placeholder="Password" /><br>
+                        <input type="password" name="confirmPassword" id="Confirm Password" placeholder="Confirm Password" /><br>
+                    </div>
+                    <div class="signup-button">
+                        <input type="submit" value="Sign Up" id="messageSent"/>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul id="icons">
+                    <li><a href="https://en.wikipedia.org/wiki/Twitter" class="icon brands fa-twitter"><i
+                                class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Facebook" class="icon brands fa-facebook-f"><i
+                                class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Instagram" class="icon brands fa-instagram"><i
+                                class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/GitHub" class="icon brands fa-github"><i
+                                class="fab fa-github-square"></i></a></li>
+                </ul>
+                <ul id="copyright">
+                    <li>&copy; Copaga. All rights reserved.</li>
+                    <li>Design: <a href="about.html">Gustavo Copaga</a></li>
+                </ul>
+            </footer>
+
+            <!-- LOOK FOR FORMSFREE -->
+            <script src="./scripts/navToggle.js"></script>
+
+        </div>
+    </body>
+</html>

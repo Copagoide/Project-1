@@ -6,38 +6,129 @@ h3,
 p,
 a,
 ul,
-input {
+input,
+button,
+textarea {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-  list-style: none;
   font-size: 1rem;
+  list-style: none;
   font-weight: normal;
   text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
   color: #f4f3ee;
+  border: none;
+}
+
+body {
+  background-color: #f5f3e5;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
 }
 
 /* Header */
 #header {
   z-index: 100;
-  display: flex;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 18px;
-  padding-bottom: 18px;
   background: #383838;
 }
-#header nav {
-  list-style: none;
-  text-align: right;
-  width: calc(100% - 61.44px);
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin: 0 auto;
 }
-#header a {
-  margin-left: 20px;
+#header nav {
+  text-align: center;
+}
+#navbar li a {
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+#navbar li a:hover {
+  color: #5c5b5b;
+}
+h1 {
+  user-select: none;
+}
+#navbar li,
+h1 {
+  display: inline-block;
+  padding: 1rem 0.5rem;
+}
+.nav-toggle {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0;
+}
+#header-container .open {
+  height: 100vh;
+}
+
+#pages {
+  height: 0;
+  overflow: hidden;
+  transition: 250ms ease-in-out;
+  display: block;
+  background: #383838;
+  flex-direction: column;
+  margin-top: 1rem;
+  position: absolute;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  right: 68px;
+}
+#pages li {
+  display: block;
 }
 #navbar li {
-  display: inline-flex;
+  height: 20px;
+}
+#navbar .pagesOpen {
+  height: 164px;
+  display: block;
+  flex-direction: column;
+}
+#pages li {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.hidden {
+  display: none;
+}
+@media all and (max-width: 720px) {
+  #header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #navbar {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: 250ms ease-in-out;
+  }
+  #navbar li {
+    display: block;
+    text-align: center;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  #pages {
+    position: relative;
+    left: 0;
+  }
+  #navbar .pagesOpen {
+    height: 137px;
+  }
 }
 
 /* Footer */
@@ -47,6 +138,8 @@ input {
   text-align: center;
   display: block;
   background: #383838;
+  position: sticky;
+  top: 100%;
 }
 #icons li {
   margin-top: 8px;
@@ -63,15 +156,66 @@ input {
   display: inline-block;
 }
 
-body {
-  z-index: -100;
-  background-color: #f5f3e5;
+/* ICONS */
+.fas {
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.fas:hover,
+.fa-twitter-square:hover,
+.fa-facebook-square:hover,
+.fa-instagram-square:hover,
+.fa-github-square:hover {
+  color: #5c5b5b;
+}
+.fa-bars {
+  padding: 0;
+  font-size: 1.2rem;
+}
+.fa-times {
+  padding: 0;
+  font-size: 1.4rem;
+}
+.fa-chevron-down {
+  padding: 0;
+  padding-left: 5px;
+}
+.fa-headphones-alt {
+  font-size: 1.45rem;
+}
+.fa-sync-alt {
+  font-size: 1.3rem;
+}
+.fa-twitter-square,
+.fa-facebook-square,
+.fa-instagram-square,
+.fa-github-square {
+  font-size: 2rem;
+}
+.fa-twitter::before,
+.fa-facebook-f::before,
+.fa-instagram::before,
+.fa-github::before {
+  display: none;
 }
 
-/* ABOUT PAGE */
-#main h2,
-#main h3,
-#main p {
+/* SIGN UP - SEND FEEDBACK BUTTONS: */
+.signup-body #messageSent:hover {
+  cursor: pointer;
+  background-color: #c2c2c2;
+}
+.feedback-body #messageSent:hover {
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  color: #383838;
+  background-color: #f4f3ee;
+}
+
+/* ABOUT PAGE: */
+.aboutpage-main h2,
+.aboutpage-main h3,
+.aboutpage-main p {
   color: #383838;
 }
 
@@ -137,3 +281,314 @@ body {
   }
 }
 /* END OF ABOUT PAGE CSS */
+
+/* SIGN UP PAGE: */
+.signup-body {
+  background: url("./images/pexels-sebastian-palomino-1955134.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(200, 200, 200, 0.4);
+  position: absolute;
+}
+.main-wrapper {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.signup-main {
+  display: inline-block;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 228;
+  margin: 15px;
+  background: rgba(200, 200, 200, 0.5);
+  border-radius: 10px;
+  text-decoration: none;
+}
+.signup-main h3 {
+  color: #383838;
+  margin-bottom: 13px;
+}
+.signup-main input {
+  padding: 8px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-radius: 6px;
+  width: 400px;
+}
+.signup-button input {
+  width: 90px;
+  margin-top: 7px;
+  margin-bottom: 0;
+  color: #383838;
+}
+@media all and (max-width: 550px) {
+  .signup-body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .signup-main input {
+    width: 300px;
+  }
+  .signup-button input {
+    width: 90px;
+  }
+}
+@media all and (max-width: 456px) {
+  .signup-main input {
+    width: 250px;
+  }
+  .signup-button input {
+    width: 90px;
+  }
+}
+@media all and (max-width: 418px) {
+  .signup-main input {
+    width: 200px;
+  }
+  .signup-button input {
+    width: 90px;
+  }
+}
+@media all and (max-width: 370px) {
+  .signup-main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media all and (min-width: 1060px) {
+  .signup-body {
+    background: url("./images/pexels-philip-ackermann-1666021.jpg");
+    background-size: cover;
+  }
+}
+/*
+}
+@media all and (max-height: 550px) {
+  .main-wrapper {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    /* NEED TO WORK ON HEIGHT *
+  }
+}
+*/
+/* END OF SIGNUP PAGE CSS */
+
+/* FEEDBACK PAGE: */
+.feedback-body {
+  height: 100vh;
+  text-align: center;
+}
+.feedback-body h3 {
+  margin-top: 30px;
+  color: #383838;
+}
+.feedback-wrapper {
+  background: url("./images/pexels-mihis-alex-21008.jpg");
+  background-size: cover;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px;
+  z-index: 100;
+}
+.feedback-main {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 466px;
+  min-height: 150px;
+  max-height: 380px;
+  padding: 40px;
+  z-index: -1;
+}
+
+.feedback-main h3 {
+  color: #f5f3e5;
+}
+.feedbackpage-specific {
+  display: inline-flex;
+}
+.feedbackpage-specific input {
+  width: 210px;
+}
+.feedback-main input,
+.feedback-main textarea {
+  background: none;
+  border-bottom: solid 2px #f5f3e5;
+  color: #f5f3e5;
+  margin: 10px;
+  padding: 4px;
+  outline: none;
+}
+.feedback-main input::placeholder,
+.feedback-main textarea::placeholder {
+  color: #f5f3e5;
+}
+.feedback-main textarea {
+  resize: vertical;
+  min-height: 31px;
+  max-height: 196px;
+}
+@media all and (max-width: 628px) {
+  .feedback-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .feedback-main {
+    width: 320px;
+    padding: 20px;
+  }
+  .feedbackpage-specific input {
+    width: 140px;
+  }
+  .feedback-main textarea {
+    width: 300px;
+  }
+}
+/* END OF FEEDBACK PAGE CSS */
+
+/* CONTACT PAGE: */
+.contactpage-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.captcha-container {
+  min-width: 50%;
+  max-width: 50%;
+  flex-direction: column;
+  background: #e5e5e5;
+  border-radius: 10px;
+}
+.captcha-container .header {
+  color: #e5e5e5;
+  background: #383838;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  padding: 15px 0 15px 0;
+}
+.securityCode {
+  width: 100%;
+  height: 250px;
+  background: url("./images/pexels-billel-moula-540518.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.securityCode p {
+  text-align: center;
+  line-height: 250px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 5vw;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 10px;
+  user-select: none;
+}
+.contact-icons {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+.userInput {
+  width: 100%;
+  padding: 15px 0 15px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 3px #cac9c9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.userInput input {
+  color: #383838;
+  width: 202px;
+  padding: 10px;
+  border-radius: 7px 0 0 7px;
+}
+.userInput .captchaButton {
+  color: #383838;
+  background: #cac9c9;
+  border: none;
+  padding: 10px;
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.userInput .captchaButton:hover {
+  background: #acaaaa;
+}
+.contactpage-container h2 {
+  background: #383838;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+}
+.contactpage-container div {
+  padding: 0 15px 15px;
+  background: #e5e5e5;
+  border-bottom: solid 3px #cac9c9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.contactpage-container div p {
+  padding-top: 15px;
+  color: #383838;
+}
+@media all and (max-width: 622px) {
+  .captcha-container {
+    min-width: 306px;
+  }
+}
+.bye-bye {
+  animation: bye 0.5s ease forwards;
+}
+.hello-there {
+  top: -200px;
+  animation: hello 0.7s ease forwards;
+}
+@keyframes bye {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+@keyframes hello {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

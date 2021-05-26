@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./main.css">
@@ -12,14 +13,19 @@
     <body class="aboutpage-body">
 
         <!-- Header -->
-            <header id="header">
+        <header id="header">
+            <div id="header-container">
                 <h1>Project 1</h1>
+                <div class="nav-toggle" id="navToggle">
+                    <div class="navIcon" id="bars"><i class="fas fa-bars"></i></div>
+                    <div class="navIcon hidden"><i class="fas fa-times"></i></div>
+                </div>
                 <nav id="navbar">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="#">Pages</a>
-                            <ul>
+                            <a href="#" id="pagesButton">Pages<i class="fas fa-chevron-down"></i></a>
+                            <ul id="pages">
                                 <li><a href="about.html">About Me</a></li>
                                 <li><a href="contact.html">Contact Me</a></li>
                                 <li><a href="feedback.html">Feedback</a></li>
@@ -28,8 +34,9 @@
                         <li><a href="signup.html">Sign Up</a></li>
                     </ul>
                 </nav>
-            </header>
-
+            </div>
+        </header>
+            
         <!-- Main -->
             <section id="main" class="aboutpage-main">
                 <header>
@@ -62,14 +69,14 @@
         <!-- Footer -->
             <footer id="footer">
                 <ul id="icons">
-                    <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-twitter"><span
-                                class="label">Twitter</span></a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-facebook-f"><span
-                                class="label">Facebook</span></a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-instagram"><span
-                                class="label">Instagram</span></a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/A" class="icon brands fa-github"><span
-                                class="label">Github</span></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Twitter" class="icon brands fa-twitter"><i
+                                class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Facebook" class="icon brands fa-facebook-f"><i
+                                class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Instagram" class="icon brands fa-instagram"><i
+                                class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/GitHub" class="icon brands fa-github"><i
+                                class="fab fa-github-square"></i></a></li>
                 </ul>
                 <ul id="copyright">
                     <li>&copy; Copaga. All rights reserved.</li>
@@ -77,9 +84,7 @@
                 </ul>
             </footer>
 
-
-        <!-- Scripts -->
-        <!-- ??? -->
+        <script src="./scripts/navToggle.js"></script>
 
     </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    
+    <title>Project 1</title>
+</head>
+
+<body class="contactpage-body">
+
+    <!-- Header -->
+    <header id="header">
+        <div id="header-container">
+            <h1>Project 1</h1>
+            <div class="nav-toggle" id="navToggle">
+                <div class="navIcon" id="bars"><i class="fas fa-bars"></i></div>
+                <div class="navIcon hidden"><i class="fas fa-times"></i></div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#" id="pagesButton">Pages<i class="fas fa-chevron-down"></i></a>
+                        <ul id="pages">
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="contact.html">Contact Me</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <section id="main" class="contactpage-main">
+
+        <div class="captcha-container">
+            <div class="header">Security Check</div>
+            <div class="securityCode">
+                <p id="code"></p>
+                <div class="contact-icons">
+                    <span class="readText">
+                        <i class="fas fa-headphones-alt"></i>
+                    </span>
+                    <span class="changeText">
+                        <i class="fas fa-sync-alt"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="userInput">
+                <input type="text" placeholder="Type what you see/hear">
+                <button class="captchaButton" type="submit">Submit</button>
+            </div>
+        </div>
+
+        
+        <div class="contactpage-container hidden">
+            <h2>Do you want to contact me?</h2>
+            <div>
+                <p>Email: copagavargas@gmail.com</p>
+                <p>Phone number: (+591) 78102260</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul id="icons">
+            <li><a href="https://en.wikipedia.org/wiki/Twitter" class="icon brands fa-twitter"><i
+                        class="fab fa-twitter-square"></i></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Facebook" class="icon brands fa-facebook-f"><i
+                        class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Instagram" class="icon brands fa-instagram"><i
+                        class="fab fa-instagram-square"></i></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/GitHub" class="icon brands fa-github"><i
+                        class="fab fa-github-square"></i></a></li>
+        </ul>
+        <ul id="copyright">
+            <li>&copy; Copaga. All rights reserved.</li>
+            <li>Design: <a href="about.html">Gustavo Copaga</a></li>
+        </ul>
+    </footer>
+
+
+    <script src="./scripts/captcha.js"></script>
+    <script src="./scripts/navToggle.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+</body>
+
+</html>
